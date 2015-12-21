@@ -1,0 +1,44 @@
+<script>
+	function loginCheck(loginForm){
+		console.log('here')
+		if (loginForm.l_username.value == ""){
+			alert("please input username!");
+			loginForm.l_username.focus();
+			return (false);
+		}
+		if (loginForm.l_password.value == ""){
+			alert("please input password!");
+			loginForm.l_password.focus();
+			return (false);
+		}
+	}
+</script>
+
+<table width = "300" border = "0" align = "right" >
+	<tr>
+		<form name = "loginForm" method = "post" action = "login.php" onSubmit = "return loginCheck(this)">
+		<td>
+		<table>
+		<tr>
+		<td><strong>Log In</strong></td>
+		</tr>
+		<tr>
+		<td>Username</td>
+		<td>:</td>
+		<td><input name = "l_username" type = "text" id = "l_username"></td>
+		</tr>
+		<tr>
+		<td>Password</td>
+		<td>:</td>
+		<td><input name = "l_password" type = "password" id = "l_password"></td>
+		</tr>
+		<tr>
+		<td></td>
+		<td></td>
+		<td><input type = "submit" name = "Submit" value = "Login"></td>
+		</tr>
+		</table>
+		</td>
+		</form>
+	</tr>
+</table>

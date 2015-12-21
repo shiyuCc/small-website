@@ -1,0 +1,43 @@
+<script>
+    function signupCheck(signupForm){
+        if (signupForm.s_username.value  ==  ""){
+            alert("please input username!");
+            signupForm.s_username.focus();
+            return (false);
+        }
+        if (signupForm.s_password.value  ==  ""){
+            alert("please input password!");
+            signupForm.s_password.focus();
+            return (false);
+        }
+    }
+</script>
+
+<table width = "300" border = "0" align = "center" >
+    <tr>
+        <form name = "signupForm" method = "post" action = "signup.php" onSubmit = "return signupCheck(this)">
+        <td>
+        <table>
+        <tr>
+        <td><strong>Sign Up</strong></td>
+        </tr>
+        <tr>
+        <td>Username</td>
+        <td>:</td>
+        <td><input name = "s_username" type = "text" id = "s_username"></td>
+        </tr>
+        <tr>
+        <td>Password</td>
+        <td>:</td>
+        <td><input name = "s_password" type = "password" id = "s_password"></td>
+        </tr>
+        <tr>
+        <td></td>
+        <td></td>
+        <td><input type = "submit" name = "Submit" value = "Sign up"></td>
+        </tr>
+        </table>
+        </td>
+        </form>
+    </tr>
+</table>
